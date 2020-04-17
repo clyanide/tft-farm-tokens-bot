@@ -115,7 +115,6 @@ While 1
 				Global $ffat15 = 0
 			EndIf
 			While 1
-				MsgBox(0,"me",$ffat15)
 				autobot()
 			WEnd
 	EndSwitch
