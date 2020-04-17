@@ -1,6 +1,7 @@
 # #Tiếng Việt (English below)
 
 ## Giới thiệu
+Mình chỉ là một học sinh. Thấu hiểu việc phải ôn thi, làm nhiều bài tập, không có thời gian cày cuốc nhưng vẫn muốn đổi skin hàng hiệu, mình chia sẻ cho anh em script này.
 
  Với sự ra đời của Battle Pass (Vé Thiên Hà, v.v,...), LOL có hệ thống cày kỉ vật đổi thưởng. 
  
