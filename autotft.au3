@@ -71,7 +71,7 @@ Func autobot()
 		sleep(500)
 		Send("{ENTER}")
 		sleep(500)
-		MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * 0.44375)), ($pxdifference[1] + Round($gamesz[1] * 0.5611)), 1, 10)
+		MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * 0.54297)), ($pxdifference[1] + Round($gamesz[1] * 0.45139)), 1, 10)
 	EndIf
 	WinWaitClose("League of Legends (TM) Client")
 	sleep(10000)
