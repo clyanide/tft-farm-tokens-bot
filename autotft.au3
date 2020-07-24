@@ -37,7 +37,7 @@ Func autobot()
 		ControlClick("League of Legends", "", "[Classnn:Chrome_RenderWidgetHostHWND1]", "left", 1, Round(0.5*$clientsz[0]), Round(0.775*$clientsz[1]))
 	WEnd
 	WinWait("League of Legends (TM) Client")
-	sleep(15000) ;wait for the game to exists
+	sleep(15000) ;wait for the game to exist
 	WinActivate("League of Legends (TM) Client")
 	sleep(3000)
 	Local $gamesz = WinGetClientSize("League of Legends (TM) Client")
@@ -60,7 +60,7 @@ Func autobot()
 		EndIf
 		sleep(45000) ;do something every 45 sec
 	WEnd
-	If $ffat15 = 1 Then
+	If $ffat15 = 1 Then ;Surrender if the checkbox is checked
 		Send("{ENTER}")
 		sleep(500)
 		Send("/")
@@ -72,6 +72,11 @@ Func autobot()
 		Send("{ENTER}")
 		sleep(500)
 		MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * 0.54297)), ($pxdifference[1] + Round($gamesz[1] * 0.45139)), 1, 10)
+	Else ;Quit the match immediately when HP reaches 0
+		While WinExists("League of Legends (TM) Client")
+			MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * 0.432)), ($pxdifference[1] + Round($gamesz[1] * 0.493)), 1, 10)
+			sleep(Random(5, 15, 1) * 1000)
+		WEnd
 	EndIf
 	WinWaitClose("League of Legends (TM) Client")
 	sleep(10000)
@@ -113,6 +118,8 @@ While 1
 		Case $Button1 ;=====> THE START BUTTON
 			If not _IsChecked($Checkbox1) Then
 				Global $ffat15 = 0
+			Else
+				Global $ffat15 = 1
 			EndIf
 			While 1
 				autobot()

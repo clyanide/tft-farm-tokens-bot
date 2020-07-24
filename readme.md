@@ -1,3 +1,7 @@
+﻿## Special thanks to
+
+> Trinh Hoang Vu: https://facebook.com/thoikochoidau
+
 # #Tiếng Việt (English below)
 
 ## Giới thiệu
@@ -33,14 +37,16 @@ Script chiếm chuột để thực hiện các thao tác trong game, các bạn
  ### Cài đặt và Sử dụng
  - **Bước 1:** Tải file .zip về giải nén
  - **Bước 2**: Chạy file **autotft.exe** với quyền Administrator *(Run as Administrator)*
- - **Bước 3**: **Tick** hoặc **bỏ Tick** ô **FF at 15 minutes**. Nếu tick thì phút 15 tự động đầu hàng tìm trận mới, nếu không tick thì không tự động đầu hàng, bạn phải tự đầu hàng hoặc đợi chết xong tự thoát. Bấm **Start**
+ - **Bước 3**: **Tick** hoặc **bỏ Tick** ô **FF at 15 minutes**.
+
+> Nếu tick thì phút 15 tự động đầu hàng tìm trận mới, nếu không tick thì đợi chết tự động thoát.
+
+- Bấm **Start**
   *Lưu ý: phải tick/ bỏ tick trước khi bấm Start. Khi đã bấm Start thì tick hay bỏ tick không còn tác dụng.* 
 ## Các lỗi đã biết
-Nếu bạn hoàn thành xong 1 nhiệm vụ của Game, sẽ có thông báo phần thưởng và nút "**Nhận**". Script sẽ bị gián đoạn ở chỗ đó, bạn phải tự tay bấm "**Nhận**" để script tiếp tục chạy
 
 ## Trách nhiệm
-Về cơ bản, Script chỉ bấm chuột tại các tọa độ xác định, không can thiệp vào file game tí nào.
-Mình đã dùng script gần 1 tháng và chưa thấy vấn đề gì xảy ra. Tuy nhiên, mình không chịu trách nhiệm nếu tài khoản của bạn bị ban bởi Garena Việt Nam.
+Đã tự thử nghiệm và hoạt động tốt trên acc chính của mình. Tuy nhiên nếu bạn bị ban thì mình sẽ **không chịu trách nhiệm**.
 
 # #English
 This script was written with AutoIT and worked smoothly on Vietnamese Server. However, I have no idea if it works on other server.
@@ -58,8 +64,8 @@ This script was written with AutoIT and worked smoothly on Vietnamese Server. Ho
 - Press **Start** button
 
 ## Known issues
-If you complete a mission, the game will show you a notification and an accept button. The script will stop itself because it doesn't know where to click. You have to click the accept button yourself in order to continue the script.
+
 
 ## Responsibility
 Basically the script is about mouse movement and does not edit any game files.
-I've been using it for a month. However, if your account gets banned, I won't be responsible for it.
+I've been using it for a month. However, if your account gets banned, I **won't be responsible for** it.
