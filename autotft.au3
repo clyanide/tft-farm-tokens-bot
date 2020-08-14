@@ -31,7 +31,7 @@
 Opt("MouseClickDelay", 5)
 Opt("MouseClickDownDelay", 200)
 
-;Main part-------------------------------------
+;Main part--------------------------------------
 Global $clientsz = WinGetClientSize("League of Legends") ;get the client width and height
 Global $matchlength, $TimeInMs
 Func autobot($TimeInMs)
@@ -154,13 +154,17 @@ While 1
 					$Start = True
 					;GUICtrlSetData($StartNStop, "Stop")
 					GUICtrlSetState($TimeInputBox, $GUI_DISABLE)
-					autobot($MatchLengthInMilisecond)
+					While 1
+						autobot($MatchLengthInMilisecond)
+					WEnd
 				Else
 					GUICtrlSetData($text1, "Playing TFT...")
 					$Start = True
 					;GUICtrlSetData($StartNStop, "Stop")
 					GUICtrlSetState($TimeInputBox, $GUI_DISABLE)
-					autobot($MatchLengthInMilisecond)
+					While 1
+						autobot($MatchLengthInMilisecond)
+					WEnd
 				EndIf
 			Else
 				ExitLoop
