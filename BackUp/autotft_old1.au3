@@ -84,7 +84,7 @@ Func autobot($TimeInMs)
 		Sleep(500)
 		Send("{ENTER}")
 		Sleep(500)
-		MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * (1 - 0.54297))), ($pxdifference[1] + Round($gamesz[1] * 0.45139)), 1, 10)
+		MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * (1-0.54297))), ($pxdifference[1] + Round($gamesz[1] * 0.45139)), 1, 10)
 	Else ;Quit the match immediately when HP reaches 0
 		While WinExists("League of Legends (TM) Client")
 			MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * 0.432)), ($pxdifference[1] + Round($gamesz[1] * 0.493)), 1, 10)
@@ -110,7 +110,7 @@ GUISetState(@SW_SHOW)
 #EndRegion
 
 $Accept = False
-While Not $Accept
+While not $Accept
 	$Msg = GUIGetMsg()
 	Switch $Msg
 		Case $GUI_EVENT_CLOSE
@@ -120,7 +120,7 @@ While Not $Accept
 		Case Else
 			If StringLower(GUICtrlRead($InputBox)) = "i accept" Then
 				GUICtrlSetData($Type, "Running the script...")
-				Sleep(1000)
+				sleep(1000)
 				$Accept = True
 			EndIf
 	EndSwitch
@@ -149,10 +149,10 @@ While 1
 		Case $GUI_EVENT_CLOSE
 			Exit
 		Case $StartNStop
-			If Not $Start Then
+			If not $Start Then
 				$matchlength = StringSplit(GUICtrlRead($TimeInputBox), ":")
 				Global $MatchLengthInMilisecond = Int($matchlength[1]) * 60000 + Int($matchlength[2]) * 1000
-				If $MatchLengthInMilisecond < 600000 And $MatchLengthInMilisecond <> 0 Then
+				If $MatchLengthInMilisecond < 600000 and $MatchLengthInMilisecond <> 0 Then
 					GUICtrlSetData($text1, "Minimum of game duration must be 10 min.")
 				ElseIf $MatchLengthInMilisecond = 0 Then
 					GUICtrlSetData($text1, "No surrender.")
