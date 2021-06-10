@@ -63,27 +63,19 @@ Func autobot($TimeInMs)
 	EndIf
 	Sleep(59000)
 	While TimerDiff($timer) <= $Clock
-		For $i = 1 To Random(1, 2, 1)
-			MouseClick("left", ($pxdifference[0] + $gamesz[0] * (0.3 + (0.105 * Random(0, 4, 1)))), Round(($gamesz[1] * 0.92) + $pxdifference[1]), 1, 10)
-			Sleep(Round(Random(1, 2, 0) * 1000))
-		Next
-		;MouseClick("right", ($pxdifference[0] + Round($gamesz[0] * (Random(30,40,1) + (20 * Random(0,1,1))))), $pxdifference[1] + Round($gamesz[1] * Random(31,34,0)), 1, 25) =====>   UNKNOWN ERROR
-		If TimerDiff($timer) >= 300000 Then
-			MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * 0.1914)), ($pxdifference[1] + Round($gamesz[1] * 0.893)), 2, 10)
-		EndIf
-		Sleep(45000) ;do something every 45 sec
+		
 	WEnd
-	If $TimeInMs <> 0 Then ;Surrender if the checkbox is checked
+	If $TimeInMs + Random(3000, 9000, 1) <> 0 Then ;Surrender if the checkbox is checked
 		Send("{ENTER}")
-		Sleep(500)
+		Sleep(Random(500, 600, 1))
 		Send("/")
-		Sleep(300)
+		Sleep(Random(300, 400, 1))
 		Send("f")
-		Sleep(200)
+		Sleep(Random(200, 300, 1))
 		Send("f")
-		Sleep(500)
+		Sleep(Random(500, 600, 1))
 		Send("{ENTER}")
-		Sleep(500)
+		Sleep(Random(500, 600, 1))
 		MouseClick("left", ($pxdifference[0] + Round($gamesz[0] * (1 - 0.54297))), ($pxdifference[1] + Round($gamesz[1] * 0.45139)), 1, 10)
 	Else ;Quit the match immediately when HP reaches 0
 		While WinExists("League of Legends (TM) Client")
@@ -92,7 +84,7 @@ Func autobot($TimeInMs)
 		WEnd
 	EndIf
 	WinWaitClose("League of Legends (TM) Client")
-	Sleep(10000)
+	Sleep(Random(10000, 12000, 1))
 EndFunc   ;==>autobot
 
 ;TERMS OF USE
@@ -109,7 +101,7 @@ $Donate = GUICtrlCreateButton("Buy me a coffee!", 122, 145, 129, 33)
 GUISetState(@SW_SHOW)
 #EndRegion
 
-$Accept = False
+$Accept = True
 While Not $Accept
 	$Msg = GUIGetMsg()
 	Switch $Msg
